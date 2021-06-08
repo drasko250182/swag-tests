@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <parameter name="htmlReportPath" value="S:/Dept/SoftDevel/Selenium/SWAG/reports"/>
+  <parameter name="screenshotsPath" value="S:/Dept/SoftDevel/Selenium/SWAG/reports/screenshots"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="project" value="Swag"/>
+  <parameter name="htmlReporter" value="true"/>
+  <parameter name="nodeUrl" value="http://10.32.13.36:5555/wd/hub"/>
+  <parameter name="dataResults" value="H:\Februar 2021\SWAG\"/>
+  <parameter name="url" value="http://swag:8080/swag/"/>
+  <parameter name="chromeDriverPath" value="H:\\chromedriver.exe"/>
+  <parameter name="htmlReportName" value="Regression"/>
+  <parameter name="xmlJSON" value="false"/>
+  <test name="ChromeTest1(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="nodeUrl" value="http://10.32.13.36:5555/wd/hub"/>
+    <parameter name="dataResults" value="H:\Februar 2021\SWAG\"/>
+    <parameter name="xmlJSON" value="false"/>
+    <classes>
+      <class name="com.tudor.swag.tests.suites.CubeSuite">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="verifyData" invocation-numbers="0 2 3 5 6 8"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.tudor.swag.tests.suites.CubeSuite -->
+    </classes>
+  </test> <!-- ChromeTest1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

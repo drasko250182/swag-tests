@@ -1,0 +1,94 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite thread-count="5" verbose="1" name="Suite" annotations="JDK"
+	parallel="tests">
+
+	<parameter name="project" value="Swag" />
+
+	<!-- <parameter name="url" value="http://swag-stage:8080/swag/" /> -->
+	<parameter name="url" value="http://swag:8080/swag/" />
+	<!-- <parameter name="url" -->
+	<!-- value="http://tomcat-swag1-alpha:8080/swag/" /> -->
+
+	<parameter name="browser" value="chrome" />
+	<parameter name="chromeDriverPath"
+		value="H:\\chromedriver.exe" />
+
+	<parameter name="htmlReporter" value="true" />
+	<parameter name="htmlReportName" value="Regression" />
+	<parameter name="htmlReportPath"
+		value="S:/Dept/SoftDevel/Selenium/SWAG/reports" />
+	<parameter name="screenshotsPath"
+		value="S:/Dept/SoftDevel/Selenium/SWAG/reports/screenshots" />
+
+	<!-- <parameter name="htmlReportPath" -->
+	<!-- value="S:/Dept/SoftDevel/Selenium/SWAG/reportsSingle" /> -->
+	<!-- <parameter name="screenshotsPath" -->
+	<!-- value="S:/Dept/SoftDevel/Selenium/SWAG/reportsSingle/screenshots" /> -->
+
+	<test name="ChromeTest1">
+		<parameter name="browser" value="chrome" />
+		<!-- <parameter name="nodeUrl" -->
+		<!-- value="http://10.32.13.36:5555/wd/hub" /> -->
+		<classes>
+
+			<class name="com.tudor.swag.tests.suites.ComplianceSuite" />
+			<class name="com.tudor.swag.tests.suites.CubeSuite" />
+			<class name="com.tudor.swag.tests.suites.ItAdminSuite" />
+
+		</classes>
+
+	</test>
+
+	<test name="ChromeTest2">
+		<parameter name="browser" value="chrome" />
+		<parameter name="nodeUrl"
+			value="http://10.32.13.36:5554/wd/hub" />
+		<classes>
+
+			<class name="com.tudor.swag.tests.suites.OrdersSuite" />
+			<class name="com.tudor.swag.tests.suites.SwagSuite" />
+
+		</classes>
+
+	</test>
+
+	<test name="ChromeTest3">
+		<parameter name="browser" value="chrome" />
+		<parameter name="nodeUrl"
+			value="http://10.32.13.36:5553/wd/hub" />
+		<classes>
+
+			<class name="com.tudor.swag.tests.suites.PerformanceSuite" />
+
+		</classes>
+
+	</test>
+
+	<test name="ChromeTest4">
+		<parameter name="browser" value="chrome" />
+		<parameter name="nodeUrl"
+			value="http://10.32.13.36:5552/wd/hub" />
+		<classes>
+
+			<class name="com.tudor.swag.tests.suites.PnLSuite" />
+			<class name="com.tudor.swag.tests.suites.PricingSuite" />
+
+		</classes>
+
+	</test>
+
+	<test name="ChromeTest5">
+		<parameter name="browser" value="chrome" />
+		<parameter name="nodeUrl"
+			value="http://10.32.13.36:5551/wd/hub" />
+		<classes>
+
+			<class name="com.tudor.swag.tests.suites.RiskSuite" />
+
+		</classes>
+
+	</test>
+
+
+</suite>
